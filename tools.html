@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tools</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Learning Tools</h1>
+        <!-- Sección de Pronunciación -->
+        <div class="section pronunciation">
+            <h2>Pronunciation</h2>
+            <div class="instructions">
+                <h4>Instructions</h4>
+                <h4>Click on the button "Pronounce the word" and say the following word in blue"</h4>
+            </div>
+            
+            <p id="word-to-pronounce">Word</p>
+            <button class="button" id="start-record-btn">Pronounce the Word</button>
+            <p class="result" id="pronunciation-result"></p>
+        </div>
+
+        <!-- Sección de Ortografía -->
+        <div class="section spelling">
+            <h2>Spelling</h2>
+            <h4>instructions</h4>
+            <h4>click on the player then listen to the word and write it</h4>
+            <audio id="audio-word" controls>
+                <source id="audio-source" src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <input type="text" id="spelling-input" placeholder="Type the correct word">
+            <button id="check-spelling-btn" class="button">Check Spelling</button>
+            <p class="result" id="spelling-result"></p>
+        </div>
+
+        <!-- Sección de Significados -->
+        <div class="section meaning">
+            <h2>Meaning</h2>
+            <h4>instructions</h4>
+            <h4>Search the search engine for the word you want to find</h4>
+            <input type="text" id="meaning-input" placeholder="Enter a word">
+            <button id="find-meaning-btn" class="button">Find Meaning</button>
+            <p class="result" id="meaning-result"></p>
+        </div>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

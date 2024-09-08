@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4A90E2;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Review Section */
+.review-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.review-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.review-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #4A90E2;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.review-item:hover {
+    background-color: #e3f2fd;
+}
+
+.review-item strong {
+    color: #4A90E2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

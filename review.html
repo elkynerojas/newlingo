@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Review</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Review Section */
+        .review-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .review-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .review-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #4A90E2;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .review-item:hover {
+            background-color: #e3f2fd;
+        }
+
+        .review-item strong {
+            color: #4A90E2;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Word Review Section</h1>
+            <p>Improve your vocabulary by reviewing words and their meanings.</p>
+        </header>
+
+        <!-- Review Section -->
+        <div class="review-section" id="review-section">
+            <ul id="review-list" class="review-list">
+                <!-- Dynamic word list will be inserted here -->
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        // Words with their meanings and audio files
+        const words = {
+            "amphibian": { meaning: "A vertebrate that lives on land and in water.", audio: "audio/amphibian.mp3" },
+            "glucose": { meaning: "A simple sugar, primary energy source.", audio: "audio/glucose.mp3" },
+            "antibody": { meaning: "A protein that fights infections.", audio: "audio/antibody.mp3" },
+            "cell": { meaning: "The basic unit of life.", audio: "audio/cell.mp3" },
+            "bronchus": { meaning: "A main airway branch in the lungs.", audio: "audio/bronchus.mp3" },
+            "cytoplasm": { meaning: "The jelly-like substance inside a cell.", audio: "audio/cytoplasm.mp3" },
+            "cholesterol": { meaning: "A lipid important for cell membranes.", audio: "audio/cholesterol.mp3" },
+            "atom": { meaning: "The basic unit of matter.", audio: "audio/atom.mp3" },
+            "electron": { meaning: "A negatively charged particle in an atom.", audio: "audio/electron.mp3" },
+            "proton": { meaning: "A positively charged particle in an atom's nucleus.", audio: "audio/proton.mp3" },
+            "neutral": { meaning: "Having no charge.", audio: "audio/neutral.mp3" },
+            "core": { meaning: "The central part, often referring to the nucleus.", audio: "audio/core.mp3" },
+            "orbital": { meaning: "A region where an electron is likely to be found.", audio: "audio/orbital.mp3" },
+            "motion": { meaning: "The act of moving or changing position.", audio: "audio/motion.mp3" },
+            "harmonic": { meaning: "Related to frequencies that are multiples of a fundamental frequency.", audio: "audio/harmonic.mp3" },
+            "magnitude": { meaning: "The size or extent of something.", audio: "audio/magnitude.mp3" },
+            "oscillatory": { meaning: "Involving repeated back-and-forth movement.", audio: "audio/oscillatory.mp3" },
+            "vibratory": { meaning: "Relating to vibration or rapid movement.", audio: "audio/vibratory.mp3" },
+            "acoustics": { meaning: "The study of sound and its properties.", audio: "audio/acoustics.mp3" },
+            "speed": { meaning: "The rate at which something moves or travels.", audio: "audio/speed.mp3" }
+        };
+
+        // Function to dynamically generate the word review list
+        function updateReviewSection() {
+            const reviewList = document.getElementById('review-list');
+            reviewList.innerHTML = ''; // Clear the existing list
+            for (let word in words) {
+                const listItem = document.createElement('li');
+                listItem.classList.add('review-item');
+                listItem.innerHTML = `<strong>${word}</strong>: ${words[word].meaning}`;
+                reviewList.appendChild(listItem);
+            }
+        }
+
+        // Automatically generate the review section when the page loads
+        window.onload = updateReviewSection;
+    </script>
+
+</body>
+</html>

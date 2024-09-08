@@ -1,0 +1,102 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7f7f, #ffe6e6);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+    text-align: center;
+}
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #cc0000;
+}
+.section {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+.section:hover {
+    transform: translateY(-10px);
+}
+.section h2 {
+    font-size: 1.8rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #cc0000;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+audio {
+    margin: 20px 0;
+}
+.result {
+    font-size: 3rem;
+    margin-top: 10px;
+    color: #28a745;
+}
+
+#word-to-pronounce {
+    color: blue;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#meaning-result {
+    border: solid 1px #000;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(199,189,199,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(199,189,199,1);
+    box-shadow: 3px 3px 5px 0px rgba(199,189,199,1);
+}
