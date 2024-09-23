@@ -1,27 +1,37 @@
-// scripts/tools.js
+const words = {
+    "amphibian": { meaning: "A vertebrate that lives on land and in water.", audio: "audio/ei-em-phi-bi-en.mp3" },
+    "glucose": { meaning: "A simple sugar, primary energy source.", audio: "audio/ji-el-you-see-ou-es-ee.mp3" },
+    "antibody": { meaning: "A protein that fights infections.", audio: "audio/ei-en-ti-ai-bi-ou-di-why.mp3" },
+    "cell": { meaning: "The basic unit of life.", audio: "audio/si-ee-el-el.mp3" },
+    "bronchus": { meaning: "A main airway branch in the lungs.", audio: "audio/bi-ar-ou-en-si-eich-you-es.mp3" },
+    "cytoplasm": { meaning: "The jelly-like substance inside a cell.", audio: "audio/si-wai-ti-ou-pi-el-ei-es-em.mp3" },
+    "cholesterol": { meaning: "A lipid important for cell membranes.", audio: "audio/si-eich-ou-el-ee-es-ti-ar-ou-el.mp3" },
+    "atom": { meaning: "The basic unit of matter.", audio: "audio/ei-ti-ou-em.mp3" },
+    "electron": { meaning: "A negatively charged particle in an atom.", audio: "audio/i-el-ee-si-ti-ar-ou-en.mp3" },
+    "proton": { meaning: "A positively charged particle in an atom's nucleus.", audio: "audio/pi-ar-ou-ti-ou-en.mp3" },
+    "neutral": { meaning: "Having no charge.", audio: "audio/en-ee-you-ti-ar-ei-el.mp3" },
+    "core": { meaning: "The central part, often referring to the nucleus.", audio: "audio/si-ou-ar-ee.mp3" },
+    "orbital": { meaning: "A region where an electron is likely to be found.", audio: "audio/ou-ar-bi-ai-ti-ei-el.mp3" },
+    "motion": { meaning: "The act of moving or changing position.", audio: "audio/em-ou-ti-ai-ou-en.mp3" },
+    "harmonic": { meaning: "Related to frequencies that are multiples of a fundamental frequency.", audio: "audio/eich-ei-ar-em-ou-en-ai-si.mp3" },
+    "magnitude": { meaning: "The size or extent of something.", audio: "audio/em-ei-ji-en-ai-ti-you-di-ee.mp3" },
+    "oscillatory": { meaning: "Involving repeated back-and-forth movement.", audio: "audio/ou-es-si-ai-el-el-ei-ti-ou-ar-why.mp3" },
+    "vibratory": { meaning: "Relating to vibration or rapid movement.", audio: "audio/vi-ai-bi-ar-ei-ti-ou-ar-why.mp3" },
+    "acoustics": { meaning: "The study of sound and its properties.", audio: "audio/ei-si-ou-you-es-ti-ai-si-es.mp3" },
+    "speed": { meaning: "The rate at which something moves or travels.", audio: "audio/es-pi-ee-ee-di.mp3" },
+    "teach": { meaning: "The act of instructing or educating.", audio: "audio/ti-ee-ei-si-eich.mp3" },
+    "epidemic": { meaning: "A widespread occurrence of disease.", audio: "audio/ee-pi-ai-di-ee-em-ai-si.mp3" },
+    "liver": { meaning: "An organ that processes nutrients and detoxifies.", audio: "audio/el-ai-vi-ee-ar.mp3" },
+    "hyssop": { meaning: "A plant used in traditional medicine and rituals.", audio: "audio/eich-wai-es-es-ou-pi.mp3" },
+    "atomic mass": { meaning: "The mass of an atom, mostly from protons and neutrons.", audio: "audio/ei-ti-ou-em-ai-si-em-ei-es-es.mp3" },
+    "atomic number": { meaning: "The number of protons in an atom's nucleus.", audio: "audio/ei-ti-ou-em-ai-si-en-you-em-bi-ee-ar.mp3" },
+    "electronic configuration": { meaning: "The arrangement of electrons in an atom.", audio: "audio/i-el-ee-si-ti-ar-ou-en-ai-si-kon-fi-gi-ou-rei-shon.mp3" },
+    "parabolic": { meaning: "Shaped like a parabola; describes certain types of paths or curves.", audio: "audio/pi-ei-ar-ei-bi-ou-el-ai-si.mp3" },
+    "vertical_launch": { meaning: "An upward movement starting from a vertical position.", audio: "audio/vi-ee-ar-ti-ai-si-ei-el-el-ou-en-si-eich.mp3" },
+    "sound": { meaning: "Vibrations that travel through a medium and are heard.", audio: "audio/es-ou-you-en-di.mp3" }
+};
 
-const words = [
-    { word: "amphibian", audio: "audio/amphibian.mp3", meaning: "A vertebrate that lives on land and in water." },
-    { word: "glucose", audio: "audio/glucose.mp3", meaning: "A simple sugar, primary energy source." },
-    { word: "antibody", audio: "audio/antibody.mp3", meaning: "A protein that fights infections." },
-    { word: "cell", audio: "audio/cell.mp3", meaning: "The basic unit of life." },
-    { word: "bronchus", audio: "audio/bronchus.mp3", meaning: "A main airway branch in the lungs." },
-    { word: "cytoplasm", audio: "audio/cytoplasm.mp3", meaning: "The jelly-like substance inside a cell." },
-    { word: "cholesterol", audio: "audio/cholesterol.mp3", meaning: "A lipid important for cell membranes." },
-    { word: "atom", audio: "audio/atom.mp3", meaning: "The basic unit of matter." },
-    { word: "electron", audio: "audio/electron.mp3", meaning: "A negatively charged particle in an atom." },
-    { word: "proton", audio: "audio/proton.mp3", meaning: "A positively charged particle in an atom's nucleus." },
-    { word: "neutral", audio: "audio/neutral.mp3", meaning: "Having no charge." },
-    { word: "core", audio: "audio/core.mp3", meaning: "The central part, often referring to the nucleus." },
-    { word: "orbital", audio: "audio/orbital.mp3", meaning: "A region where an electron is likely to be found." },
-    { word: "motion", audio: "audio/motion.mp3", meaning: "The act of moving or changing position." },
-    { word: "harmonic", audio: "audio/harmonic.mp3", meaning: "Related to frequencies that are multiples of a fundamental frequency." },
-    { word: "magnitude", audio: "audio/magnitude.mp3", meaning: "The size or extent of something." },
-    { word: "oscillatory", audio: "audio/oscillatory.mp3", meaning: "Involving repeated back-and-forth movement." },
-    { word: "vibratory", audio: "audio/vibratory.mp3", meaning: "Relating to vibration or rapid movement." },
-    { word: "acoustics", audio: "audio/acoustics.mp3", meaning: "The study of sound and its properties." },
-    { word: "speed", audio: "audio/speed.mp3", meaning: "The rate at which something moves or travels." }
-];
+
 
 let currentWord = getRandomWord();
 let currentSpellingWord = getRandomWord();
